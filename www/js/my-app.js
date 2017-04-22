@@ -46,7 +46,7 @@ function receivedEvent(id) {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    },
+    };
 
 
 // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
@@ -102,9 +102,11 @@ myApp.onPageInit('details', function(page) {
 */
 function getImage() {
       navigator.camera.getPicture( function( imageURI ) {
+        myApp.alert(imageURI);
         alert( imageURI );
       },
       function( message ) {
+        myApp.alert("get picture failed");
         alert( message );
       },
       {
@@ -121,20 +123,6 @@ function getImage() {
     });
 	*/
 }
-
-
-    takePicture: function() {
-      navigator.camera.getPicture( function( imageURI ) {
-        alert( imageURI );
-      },
-      function( message ) {
-        alert( message );
-      },
-      {
-        quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI
-      });
-    }
 
 
 function uploadPhoto(imageURI) {
