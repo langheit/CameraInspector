@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Line Inspection</title>
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7-icons.css">
+
+    <link rel="stylesheet" href="css/my-app.css">
+</head>
+<body>
+
+<div class="statusbar-overlay"></div>
+
+<div class="panel-overlay"></div>
+
+
+
+<div class="views">
+    <div class="view view-main">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="icon icon-back"></i>
+                        <span>Back</span>
+                    </a>
+                </div>
+
+                <div class="center">Camera Inspector</div>
+            </div>
+        </div>
+        <div class="pages navbar-through toolbar-through">
+            <div class="page" data-page="index">
+                <div class="page-content">
+                    <div class="content-block-title">Bonjour</div>
+                    <div class="content-block">
+                        <p>Cette application a pour but de réaliser des inspections volontaires de lignes de
+                            distribution. Elle encourage les employés a regarder leur réseau de distribution tout en
+                            faisant une belle marche qui est une très bonne activité physique.</p>
+                        <p>L'utilisation de cette application est a titre volontaire. Elle ne sera pas contribué et ne
+                            constitue pas un travail. Vous ne pourrez pas nous (ou tout autres conpagnies ayant des
+                            intérêts) tenir responsable pour tout dommages ou incidents subit par vous ou infliger a
+                            autruit dans le cadre de l'utilisation de cette application.</p>
+                        <p>L'application offre 3 fonctions pour les employés et une pour les équipe de plantage de
+                            poteaux:</p>
+                        <UL>
+                            <LI><p><i class="icon f7-icons color-blue">search</i>Inspection d'une ligne.</p></LI>
+                            <LI><p><i class="icon f7-icons color-blue">settings</i>Identification d'anomalies ou bris.
+                            </p></LI>
+                            <LI><p><i class="icon f7-icons color-blue">info</i>Identification de poteaux en double.</p>
+                            </LI>
+                        </UL>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="toolbar toolbar-bottom">
+            <div class="toolbar-inner">
+                <a href="inspection.html" class="tab-link">
+                    <i class="icon f7-icons color-blue">search</i>
+                    <span class="tabbar-label">Inspection</span></a>
+                <a href="camera.html">
+                    <i class="icon f7-icons color-blue">settings</i>
+                    <span class="tabbar-label">Anomalie</span></a>
+                <a href="double.html" class="tab-link">
+                    <i class="icon f7-icons color-blue">info</i>
+                    <span class="tabbar-label">Poteaux en double</span></a>
+                <a href="upload.html" class="tab-link">
+                    <i class="icon f7-icons color-blue">cloud_upload</i>
+                    <span class="badge bg-red">4</span>
+                    <span class="tabbar-label">Upload</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+<script type="text/javascript" src="js/my-app.js"></script>
+</body>
+</html>
