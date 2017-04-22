@@ -5,37 +5,19 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <title>Line Inspection</title>
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.css">
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.css">
-    <link rel="stylesheet" href="lib/framework7/css/framework7-icons.css">
     <link rel="stylesheet" href="css/my-app.css">
 </head>
 <body>
 
-<div class="views">
-    <div class="view view-main">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="left">
-                    <a href="#" class="back link">
-                        <i class="icon icon-back"></i>
-                        <span>Back</span>
-                    </a>
-                </div>
-                <div class="center">Camera Inspector</div>
-            </div>
-        </div>
-        <div class="pages navbar-through toolbar-through">
-            <div class="page" data-page="index">
-                <div class="page-content">
-                    <div class="content-block-title">Bonjour</div>
-                    <div class="content-block">
-						<div id="deviceready" class="blink">
-							<p class="event listening">Connecting to Device</p>
-							<div class="event received">
-								<p>Device is Ready</p>
-							</div>
-						</div>
+<div class="app">
+    <h1>Camera Inspector</h1>
+	<div id="deviceready" class="blink">
+		<p class="event listening">Connecting to Device</p>
+		<div class="event received">
+			<p>Device is Ready</p>
+		</div>
+	</div>
+	<div >Identification de l'anomalie
                         <p>Cette application a pour but de réaliser des inspections volontaires de lignes de
                             distribution. Elle encourage les employés a regarder leur réseau de distribution tout en
                             faisant une belle marche qui est une très bonne activité physique.</p>
@@ -46,48 +28,22 @@
                         <p>L'application offre 3 fonctions pour les employés et une pour les équipe de plantage de
                             poteaux:</p>
                         <UL>
-                            <LI><p><i class="icon f7-icons color-blue">search</i>Inspection d'une ligne.</p></LI>
-                            <LI><p><i class="icon f7-icons color-blue">settings</i>Identification d'anomalies ou bris.
-                            </p></LI>
-                            <LI><p><i class="icon f7-icons color-blue">info</i>Identification de poteaux en double.</p>
+                            <LI><p>Inspection d'une ligne.</p></LI>
+                            <LI><p>Identification d'anomalies ou bris.</p></LI>
+                            <LI><p>Identification de poteaux en double.</p>
                             </LI>
                         </UL>
-                    </div>
-					<div class="content-block-title">Identification de l'anomalie
-						<p><a href="cab.html" class="button button-fill color-red">CAB</a></p>
-						<p><a href="javascript:getImage()" class="button button-fill color-green">PICTURE</a></p>
-						<p><a href="javascript:capturePhotoWithData();" class="button button-fill color-green">Capture Photo With Image Data</a></p>
-						<p><a href="javascript:capturePhotoWithFile();" class="button button-fill color-green">Capture Photo With Image File URI</a></p>
-						<!--p><a href="javascript:getPhoto(pictureSource.PHOTOLIBRARY);" class="button button-fill color-green">From Photo Library</a></p>
-						<p><a href="javascript:getPhoto(pictureSource.SAVEDPHOTOALBUM);" class="button button-fill color-green">From Photo Album</a></p-->
-						<p><img style="display:none;width:60px;height:60px;" id="smallImage" src="" /></p>
-						<p><img style="display:none;" id="largeImage" src="" /></p>
-					</div>
-				</div>
-            </div>
-        </div>
-        <div class="toolbar toolbar-bottom">
-            <div class="toolbar-inner">
-                <a href="inspection.html" class="tab-link">
-                    <i class="icon f7-icons color-blue">search</i>
-                    <span class="tabbar-label">Inspection</span></a>
-                <a href="image.html">
-                    <i class="icon f7-icons color-blue">settings</i>
-                    <span class="tabbar-label">Anomalie</span></a>
-                <a href="double.html" class="tab-link">
-                    <i class="icon f7-icons color-blue">info</i>
-                    <span class="tabbar-label">Poteaux en double</span></a>
-                <a href="upload.html" class="tab-link">
-                    <i class="icon f7-icons color-blue">cloud_upload</i>
-                    <span class="badge bg-red">4</span>
-                    <span class="tabbar-label">Upload</span></a>
-            </div>
-        </div>
+    </div>
+	<div >Identification de l'anomalie
+		<p><a href="app.takePicture()" class="button">TAKE PICTURE</a></p>
+		<p><a href="javascript:getImage()" class="button">PICTURE</a></p>
+		<p><a href="javascript:capturePhotoWithData();" class="button">Capture Photo With Image Data</a></p>
+		<p><a href="javascript:capturePhotoWithFile();" class="button">Capture Photo With Image File URI</a></p>
+		<p><img style="display:none;width:60px;height:60px;" id="smallImage" src="" /></p>
+		<p><img style="display:none;" id="largeImage" src="" /></p>
     </div>
 </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-
-<script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
-<script type="text/javascript" src="js/my-app.js"></script>
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="js/my-app.js"></script>
 </body>
 </html>
