@@ -101,9 +101,17 @@ myApp.onPageInit('details', function(page) {
 
 */
 function getImage() {
-    myApp.alert("test picture ");
-    console.log('test picture!');
-    navigator.camera.getPicture(uploadPhoto, function(message) {
+      navigator.camera.getPicture( function( imageURI ) {
+        alert( imageURI );
+      },
+      function( message ) {
+        alert( message );
+      },
+      {
+        quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI
+      });
+/*    navigator.camera.getPicture(uploadPhoto, function(message) {
         alert('get picture failed');
         myApp.alert("get picture failed");
     }, {
@@ -111,7 +119,23 @@ function getImage() {
         destinationType: navigator.camera.DestinationType.FILE_URI,
         sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
     });
+	*/
 }
+
+
+    takePicture: function() {
+      navigator.camera.getPicture( function( imageURI ) {
+        alert( imageURI );
+      },
+      function( message ) {
+        alert( message );
+      },
+      {
+        quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI
+      });
+    }
+
 
 function uploadPhoto(imageURI) {
     var options = new FileUploadOptions();
